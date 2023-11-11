@@ -3,8 +3,6 @@ from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButt
 from constants import PICKLE_GUIDE
 
 
-#button_pickle_guide = KeyboardButton(PICKLE_GUIDE)
+menu_kb = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text = 'Меню')]], resize_keyboard=True)
 
-#main_kb = ReplyKeyboardMarkup()
-#main_kb.add(button_pickle_guide)
-
+gallery_kb = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text = 'Галерея')]], resize_keyboard=True)

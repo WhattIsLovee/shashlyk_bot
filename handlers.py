@@ -5,6 +5,8 @@ from aiogram import Dispatcher
 
 import keyboard as kb
 
+import constants
+
 
 router = Router()
 dp = Dispatcher()
@@ -12,19 +14,14 @@ dp = Dispatcher()
 
 @router.message(Command('start'))
 async def start_handler(msg: Message):
-    await msg.answer("Я могу помочь Вам при решении шашлычных вопросов.")
+    await msg.answer('Я могу помочь Вам при решении шашлычных вопросов.')
+    #await msg.answer(MENU, reply_markup=kb.exit_kb)
 
-@dp.message
-async def cmd_start(message: types.Message):
-    kb = [
-        [
-            types.KeyboardButton(text="С пюрешкой"),
-            types.KeyboardButton(text="Без пюрешки")
-        ],
-    ]
-    keyboard = types.ReplyKeyboardMarkup(
-        keyboard=kb,
-        resize_keyboard=True,
-        input_field_placeholder="Выберите способ подачи"
-        )
-    await message.answer("Как подавать котлеты?", reply_markup=keyboard)
+@router.message(F.text == 'Галерея')
+async def galery_handler(msg: Message):
+    await msg.answer(constants.GALLERY, reply_markup=kb.gallery_kb)
+
+
+#@router.message(F.text == "Меню")
+#async def menu(msg: Message):
+    #await msg.answer(MENU, reply_markup=kb.exit_kb)
