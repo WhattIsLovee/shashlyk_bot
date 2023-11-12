@@ -14,7 +14,7 @@ dp = Dispatcher()
 
 @router.message(Command('start'))
 async def start_handler(msg: Message):
-    await msg.answer('Я могу помочь Вам при решении шашлычных вопросов.')
+    await msg.answer('Я могу помочь Вам при решении шашлычных вопросов.', reply_markup=kb.menu_kb)
     #await msg.answer(MENU, reply_markup=kb.exit_kb)
 
 @router.message(F.text == 'Галерея')
@@ -22,6 +22,6 @@ async def galery_handler(msg: Message):
     await msg.answer(constants.GALLERY, reply_markup=kb.gallery_kb)
 
 
-#@router.message(F.text == "Меню")
-#async def menu(msg: Message):
-    #await msg.answer(MENU, reply_markup=kb.exit_kb)
+@router.message(F.text == "Меню")
+async def menu(msg: Message):
+    await msg.answer(constants.MENU, reply_markup=kb.menu_kb)
