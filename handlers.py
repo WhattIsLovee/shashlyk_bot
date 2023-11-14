@@ -16,7 +16,6 @@ dp = Dispatcher()
 @router.message(Command('start'))
 async def start_handler(msg: Message):
     await msg.answer('Я могу помочь Вам при решении шашлычных вопросов.', reply_markup=kb.menu_kb)
-    #await msg.answer(MENU, reply_markup=kb.exit_kb)
 
 
 @router.message(F.text == 'Галерея')
