@@ -8,8 +8,8 @@ menu_kb = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text = 'Меню')]], re
 gallery_kb = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text = 'Галерея')]], resize_keyboard=True)
 
 def create_keyboard():
-    keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+    kb1 = ReplyKeyboardMarkup(resize_keyboard=True)
     button1 = KeyboardButton("Кнопка 1")
     button2 = KeyboardButton("Кнопка 2")
-    keyboard.row(button1, button2)
-    return keyboard
+    kb1.row(button1, button2)
+    return kb1
