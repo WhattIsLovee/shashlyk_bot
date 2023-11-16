@@ -28,6 +28,3 @@ async def menu(msg: Message):
     await msg.answer(constants.MENU, reply_markup=kb.menu_kb)
 
 
-@router.message(F.text == "1")
-async def button1_handler(msg: Message):
-    await msg.answer("Вы нажали на Кнопку 1", reply_markup=create_keyboard)
