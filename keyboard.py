@@ -4,4 +4,3 @@ from aiogram.types import ReplyKeyboardRemove, ReplyKeyboardMarkup, KeyboardButt
 menu_kb = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text = 'Меню')]], resize_keyboard=True)
 
 gallery_kb = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text = 'Галерея')]], resize_keyboard=True)
-
