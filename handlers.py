@@ -7,8 +7,6 @@ import keyboard as kb
 
 import constants
 
-from keyboard import MyKeyboard
-
 
 router = Router()
 dp = Dispatcher()
