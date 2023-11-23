@@ -25,3 +25,5 @@ async def galery_handler(msg: Message):
 @router.message(F.text == "Меню")
 async def menu(msg: Message):
     await msg.answer(constants.MENU, reply_markup=kb.menu_kb)
+
+    
