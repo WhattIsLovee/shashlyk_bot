@@ -1,6 +1,6 @@
-PICKLE_GUIDE = '🧪 Маринование мяса'
+PICKLE_GUIDE = '🧪 Рецепты маринада'
 FRYING_GUIDE = '🔥 Жарка'
 GALLERY = '📸 Ваша фотоплёнка'
 BACK = '⏎ Назад'
-
 MENU = '📍 Главное меню'
+FAVORITES = '⭐️ Избранное'
