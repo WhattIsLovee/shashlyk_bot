@@ -51,4 +51,4 @@ async def frying_guides_handler(msg: Message):
     articles_list_html = ''
     for i, article in enumerate(articles):
         articles_list_html += f'{i + 1}. <a href="{article.link}">{article.title}</a>\n'
-    await msg.answer(articles_list_html, reply_markup = kb.frying_kb, disable_web_page_preview = True)
+    await msg.answer(articles_list_html, reply_markup = kb.guide_kb, disable_web_page_preview = True)
