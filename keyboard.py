@@ -25,3 +25,7 @@ gallery_kb = ReplyKeyboardMarkup(keyboard=[
     [KeyboardButton(text = '＋ Добавить фото'), KeyboardButton(text = '❌ Удалить фото')],
     [KeyboardButton(text = '🖼️ Мои фото'), KeyboardButton(text = MENU)],
     ], resize_keyboard=True)
+
+guide_kb = ReplyKeyboardMarkup(keyboard=[
+    [KeyboardButton(text = '＋ Добавить в избранное'), KeyboardButton(text = BACK), KeyboardButton(text = MENU)],
+    ], resize_keyboard=True)
