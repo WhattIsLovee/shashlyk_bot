@@ -47,7 +47,7 @@ async def gallery_handler(msg: Message):
 
 @router.message(F.text == '🪵 Гайды по жарке')
 async def frying_guides_handler(msg: Message):
-    articles = session.query(Article).all()
+    articles = session.query(Article).filter(Article.type == 'frying').all()
     articles_list_html = ''
     for i, article in enumerate(articles):
         articles_list_html += f'{i + 1}. <a href="{article.link}">{article.title}</a>\n'
